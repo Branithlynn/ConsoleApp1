@@ -8,6 +8,9 @@ namespace ConsoleApp1
 {
     internal class FileName
     {
+        public void test()
+        {
 
+        }
     }
 }

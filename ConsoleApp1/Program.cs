@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Security.Policy;
+using System.Text;
 using System.Threading.Tasks;
 
 class Program
 {
     static async Task Main()
     {
+        Console.OutputEncoding = Encoding.UTF8;
+        await Console.Out.WriteLineAsync("test");
         await SendPostRequest();
         Console.ReadKey();
     }
@@ -19,8 +22,9 @@ class Program
         await Sum();
         await Reward();
     }
-    public static async Task StartGame()
+    static async Task StartGame()
     {
+        //Welcome
         string url = "https://antamacoding.com/Home/welcoming";
 
         using (HttpClient client = new HttpClient())
@@ -33,7 +37,7 @@ class Program
             Console.WriteLine($"Response Content: {await response.Content.ReadAsStringAsync()}");
         }
     }
-    public static async Task Login()
+    static async Task Login()
     {
         string url = "https://antamacoding.com/Home/login";
 
@@ -53,7 +57,7 @@ class Program
             Console.WriteLine($"Response Content: {await response.Content.ReadAsStringAsync()}");
         }
     }
-    public static async Task Sum()
+    static async Task Sum()
     {
         string url = "https://antamacoding.com/Home/sum";
 
@@ -73,7 +77,7 @@ class Program
             Console.WriteLine($"Response Content: {await response.Content.ReadAsStringAsync()}");
         }
     }
-    public static async Task Reward()
+    static async Task Reward()
     {
         string url = "https://antamacoding.com/Home/pythonsucks";
         using (HttpClient client = new HttpClient())
