@@ -10,6 +10,7 @@ class Program
     static async Task Main()
     {
         Console.OutputEncoding = Encoding.UTF8;
+        await Console.Out.WriteLineAsync("asdasdasdasdasdasd");
         await Console.Out.WriteLineAsync("test");
         await SendPostRequest();
         Console.ReadKey();
