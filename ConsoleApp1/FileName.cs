@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public void test()
         {
-
+            Console.WriteLine("asdasdasd");
         }
     }
 }
